@@ -13,20 +13,20 @@ if (isset($_POST)) {
         $mail->CharSet  = "utf-8";
         $mail->Host = 'smtp.gmail.com'; 
         $mail->SMTPAuth = true; 
-        $nguoigui = 'hoangviet852004@gmail.com';
+        $nguoigui = 'thanh07102k4@gmail.com';
         $matkhau = 'nakqppwzfqlxvcsc';
-        $tennguoigui = 'VietHoang';
+        $tennguoigui = 'ThuThanh';
         $mail->Username = $nguoigui; 
         $mail->Password = $matkhau;   
         $mail->SMTPSecure = 'ssl';  
         $mail->Port = 465;                 
         $mail->setFrom($nguoigui, $tennguoigui);
         $to = $_POST['email'];
-        $to_name = "VietHoang";
+        $to_name = "ThuThanh";
 		$tieude = $_POST['tieude'];
 
         $mail->addAddress($to, $to_name);  
-		$mail->addAddress("hoangviet852004@gmail.com","VietHoang");
+		$mail->addAddress("thanh07102k4@gmail.com","ThuThanh");
         $mail->isHTML(true);  
         $mail->Subject = $tieude;
 		$noidungthu = ' <div class="card" style="width: 18rem;">
